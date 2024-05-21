@@ -1,0 +1,15 @@
+
+body {
+    margin-top: 20px;
+    background-color: #eef7ff ;
+}
+
+.link-to-page {
+    float: right;
+    margin: 0 2px 0 2px;
+}
+
+.logo {
+    height: 290px;
+    width: 288px;
+}

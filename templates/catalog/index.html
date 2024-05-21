@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Creative Bakery</h1>
+    <p>We bake your fantasies.</p>
+    <div class="logo">
+        <img  src="/static/img/Cookie.png" alt="Logo">
+    </div>
+    
+    <h2>Dynamic content</h2>
+    <p>The Bakery Service has the following record counts:</p>
+    <ul>
+        <li><strong>Dishes:</strong> {{ num_dishes }}</li>
+        <li><strong>Cooks:</strong> {{ num_cooks }}</li>
+        <li><strong>Dish types:</strong> {{ num_dish_types }}</li>
+    </ul>
+
+    <p>You have visited this page
+        {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
+    
+    <h1>What we bake</h1>
+    <p>We can customize our cookies right for your needs. Just imagine it</p>
+
+{% endblock %}
