@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Dish type list<a style="float: right" href="{% url 'catalog:dish-type-create' %}">+</a> </h1>
+  {% if dish_type_list %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+      </tr>
+      {% for dish_type in dish_type_list %}
+        <tr>
+          <td>
+            {{ dish_type.id }}
+          </td>
+          <td>
+            {{ dish_type.name }}
+          </td>
+          <td>
+            <a href="{% url 'catalog:dish-type-update' pk=dish_type.id %}">UPDATE</a>
+          </td>
+          <td>
+            <a href="{% url 'catalog:dish-type-delete' pk=dish_type.id %}">DELETE</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no Dish type in Catalog</p>
+  {% endif %}
+{% endblock %}
